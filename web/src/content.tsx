@@ -35,6 +35,16 @@ export const IN_USE = {
 
 export const SLIDER_FOOD = [
   {
+    name: "mate-a",
+    rot: [0, 0, 0],
+    wiggle: 0.4,
+    copy: {
+      name: "Mate token",
+      description: "33.23¥",
+    },
+    bg: [0xbf965a, 0x993b8b, 0xb26c52],
+  },
+  {
     name: "toast-a",
     rot: [0, 0, 0],
     wiggle: 0.4,

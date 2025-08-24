@@ -31,7 +31,7 @@ export class Scene extends THREE_Scene {
     5 - cake !         
     */
 
-    const item = [0, 3, 4, 5][Math.floor(Math.random() * 4)]
+    const item = [0]
 
     // const item = 0
 
