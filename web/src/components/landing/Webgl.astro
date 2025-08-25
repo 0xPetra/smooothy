@@ -4,12 +4,19 @@ import BouncySvg from "./BouncySvg.astro"
 import TitleText from "./comps/TitleText.astro"
 import Svgg from "../svg/Svgg.astro"
 import GithubLink from "../GithubLink.astro"
+import HoverUl from "@c/HoverUl.astro"
 
 const WEBGL = {
-  title: "MATE token.",
+  title: "MATE token",
   description:
-    "play token that hold no economic value.",
+    "play token that holds no economic value.",
 }
+
+const link = {
+  href: "https://core.precog.market/claim/8453/mate?ref=devconnect",
+  label: "CLAIM MATE"
+}
+
 ---
 
 <Section>
@@ -26,7 +33,30 @@ const WEBGL = {
             <div class="w-[30%] md:w-[80%]">
               <Svgg name="food_toast" class="size-full" />
             </div>
-            <TitleText title={WEBGL.title} description={WEBGL.description} />
+
+            <div>
+              <a
+                href={link.href}
+                class:list={[
+                  link.style && link.style,
+                  "pointer-events-auto tracking-wide",
+                ]}
+                target={link.target}
+                data-module="alpha"
+              >
+              <h2
+                data-module="text"
+                data-type="chars"
+                class="tr-s text-[1.6rem] leading-[1em] font-semibold text-balance"
+              >
+                {!link.icon && <HoverUl text={link.label} />}
+              </h2>         
+            </a>
+
+            <p data-module="text" data-type="words" class="max-w-[80%]">
+              {WEBGL.description}
+            </p>
+          </div>
 
           </div>
         </div>
